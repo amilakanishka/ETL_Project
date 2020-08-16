@@ -19,40 +19,40 @@ EXTRACT - Data sources
 
 TRANSFORM - Proposed clean up and analysis
 
-●	Covid data sets needed to aggregate the counts of deaths and confirmed cases for each day until the cutoff date derived columns.
-●	Data is up to date, but each column has accumulated values. 
-●	Remove duplicates, check dtypes, sense check with column counts and visualize with scatter plots.
-●	We used .describe() and visualized with py.scatter to identify potential issues with data sources. 
-●	Merge was used to integrate datasets and left join on ‘country name’ was used to integrate tables. 
-●	The transformation was done using Jupyter Notebook and ERD was done on https://app.quickdatabasediagrams.com/
-●	Transformation helped to convert the data into more meaningful format to start our storytelling.
+●	Covid data sets needed to aggregate the counts of deaths and confirmed cases for each day until the cutoff date derived columns.\n
+●	Data is up to date, but each column has accumulated values. \n
+●	Remove duplicates, check dtypes, sense check with column counts and visualize with scatter plots.\n
+●	We used .describe() and visualized with py.scatter to identify potential issues with data sources. \n
+●	Merge was used to integrate datasets and left join on ‘country name’ was used to integrate tables. \n
+●	The transformation was done using Jupyter Notebook and ERD was done on https://app.quickdatabasediagrams.com/ \n
+●	Transformation helped to convert the data into more meaningful format to start our storytelling. 
 
 LOAD - Data storage
 
-●	We stored our data using a Relational database - PostgreSQL.
-●	PostgreSQL is simple and clean to use as a db tool.
-●	Four tables in ERD:
-	1.	Country/Country ID	
-	2.	Country/Country ID/Covid Deaths/Confirmed cases/ID  
-	3.	Country ID/Region/Population/ID
-	4.	Country ID/Country/% of gdp on health/ID
+●	We stored our data using a Relational database - PostgreSQL.\n
+●	PostgreSQL is simple and clean to use as a db tool. \n
+●	Four tables in ERD:\n
+	1.	Country/Country ID	\n
+	2.	Country/Country ID/Covid Deaths/Confirmed cases/ID  \n
+	3.	Country ID/Region/Population/ID \n
+	4.	Country ID/Country/% of gdp on health/ID 
 
 Potential limitations
 
-●	Two potential limitations of our above proposed steps are:
-	1.	Naming conventions in countries; for example, some countries have multiple names (East Timor and Timor Leste). This will affect the join process and 		querying the data.
-	2.	We are limited by the total information available, as not all countries have a resource with updated and correct health expenditure.
+●	Two potential limitations of our above proposed steps are:\n
+	1.	Naming conventions in countries; for example, some countries have multiple names (East Timor and Timor Leste). This will affect the join process and querying the data. \n
+	2.	We are limited by the total information available, as not all countries have a resource with updated and correct health expenditure. \n
 ●	To overcome these potential issues, we are using the countries that we have available to analyze, thus we will mention during the conclusion that only some countries had sufficient information for us to use.
 
 Outcome
 
-●	The correlation between both factors health expenditures and percentage of death vs confirmed cases by country is 0.09
+●	The correlation between both factors health expenditures and percentage of death vs confirmed cases by country is 0.09 \n
 ●	See our 'Report' notebook 
 
 ****Folders and Files****
 
-'Resources' folder contains all the raw data csv files. 
-'Data' folder contains all the glanced and transformed data csv files. 
-'config.py' file contains userid and password to database. 
-Four notebooks show extraction, transformation and report generation processes. 
+'Resources' folder contains all the raw data csv files. \n
+'Data' folder contains all the glanced and transformed data csv files. \n 
+'config.py' file contains userid and password to database. \n
+Four notebooks show extraction, transformation and report generation processes. \n
 ERD and schema are also provided. 
